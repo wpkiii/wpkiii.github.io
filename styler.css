@@ -1,0 +1,28 @@
+p1{
+	text-align: center;
+	 font-family: "Lucida Console"; 
+ 	font-size: 20px;
+	color: dark gray
+	width: 200px;
+  	padding: 25px;
+	
+
+}
+
+p2{
+	background :orange; 
+}
+
+p3 {
+	color: red;
+	font-weight: bold;
+	
+}
+
+p4{
+	text-indent: 50px;
+}
+
+p5{
+	text-decoration : underline;
+}
