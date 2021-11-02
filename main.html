@@ -1,0 +1,85 @@
+<html>
+<head>
+
+<title> Mr. Treys Assignment 5  </title>
+<!--style sheet for title, images,and other text  -->
+<style>
+h1 {font-family: Verdana;
+    font-size: 180%;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+p{
+  font-family: Verdana;
+      font-size: 75%;
+      text-align: left;
+      text-decoration: underline;
+      font-weight: bold;
+}
+img {
+  border-radius: 8px;
+    width : 15%;
+    height: 15%;
+}
+</style>
+
+</head>
+<!-- Heading -->
+<body style = "background-color: powderblue">
+     <h1> Shortcut Webpage & Practice with JQuery: </h1> <br> <br> <br>
+
+<!-- Beginning of the Span -->
+<span class = "icons">
+  <center>
+  <!-- <a href = "https://www.instagram.com/"> -->
+  <img src = "Instagram.png" data-name="Instagram" data-url = "https://www.instagram.com/" >
+  <img src = "Snapchat.png" data-name="Snapchat" data-url = "https://www.snapchat.com/">
+  <img src = "Spotify.png" data-name="Spotify" data-url = "https://www.spotify.com/">
+  <img src = "Supreme.png" data-name="Supreme" data-url = "https://www.supremenewyork.com/" >
+  <img src = "Twitter.png" data-name="Twitter" data-url = "https://www.twitter.com/">
+  <img src = "Pbsnewshour.png" data-name="PBS" data-url = "https://www.pbs.org/newshour/" > </center>
+</span>
+<br>
+<!-- Div Section  -->
+<div id="in"></div>
+<div id="out"></div>
+<div id="mouse"></div>
+<!-- JQuery  -->
+<center> <img src="" id="enlarged-logo" alt=""> </center>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- Mouse Event Handlers -->
+<script>
+
+    $(".icons img").mouseenter(
+      function(){
+        $("#in").html( "In :" + $(this).data('name'));
+        $(this).css('opacity', '0.5');
+    });
+
+    $(".icons img").mouseleave(
+      function(){
+        $("#out").html("Out :" +  $(this).data('name'));
+        $(this).css('opacity', '1');
+    });
+
+// problematic code...
+ $(".icons img").click(
+      function(){
+ $("#enlarged-logo").attr('src',$(this).attr('src'));
+    });
+
+    $(".icons img").dblclick(
+      function(){
+        window.open($(this).data('url'));
+    });
+
+    $(".icons").mousemove(
+      function(event){
+          $("#mouse").html( "Mouse X: " + event.pageX + ", Y:" + event.pageY );
+    });
+
+</script>
+</body>
+</html>
